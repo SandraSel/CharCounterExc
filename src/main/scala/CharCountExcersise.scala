@@ -5,7 +5,7 @@ object CharCounterExercise extends App {
   val userSentence = readLine ("Hello! Please enter a sentence: ")
   //TO DO calculate and save character frequency into a Map
   val map = scala.collection.mutable.HashMap.empty[Char, Int]
-  for (symbol <- userSentence) {
+  for (symbol <- userSentence) { //could also use userSentence.toLowerCase.replace(" ", ""))
     if (map.contains(symbol))
       map(symbol) = map(symbol) + 1
     else
